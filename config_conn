@@ -9,8 +9,8 @@ $dbname = "mydb";
 $myconn = mysqli_connect($servern, usern, $passn, $dbname);
 
 // Check connection
-If ($myconn->connect_error){
-  die("Connection failed: " . $conn->connect_error);
+If (!$conn){
+  die("Connection failed: " . mysqli_connect_error);
 }
   echo "Connected Successfully";
 
